@@ -1,0 +1,60 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>metcalc: A metric suffix calculator.</title>
+  <meta name="description" content="A metric suffix calculator for electronics, chemistry, etc.">
+  <meta name="author" content="Scott Means">
+
+  <link rel="stylesheet" href="css/style.css?v=1.0">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <h1>metcalc&nbsp;<div class="round-button about" type="button">?</div></h1>
+  <div class="calc">
+    <div class="entry" contenteditable="" name="exp"></div>
+    <div class="equals">=</div><div class="result"></div>
+  </div>
+  <div class="error hidden"></div>
+  <div class="about_page hidden">
+    <div class="content">
+      <h2>about metcalc</h2>
+      <p>While working on an electronics design project, I found myself doing a
+        decent amount of basic math on quantities with very unlike magnitudes. I
+        just wanted to be able to multiply microfarads by kilohoms without having
+        to remember the various exponents in my head.</p>
+      <p>I looked around for a while, but I couldn't find a calculator that did
+        exactly what I wanted, so I wrote metcalc. It understands most of the
+        standard metric units and lets you do math with them directly. Some examples:</p>
+        <ul>
+          <li>1/(.7*10k*1u)</li>
+          <li>1T/100k</li>
+          <li>1p*1000</li>
+        </ul>
+      </p>To get a feel for how it works, type 1M/1 into the calculation box and
+      keep adding zeros to the end. It will step through all of the units that it
+      recognizes.</p>
+      <p>It only supports the four basic math operations (+, -, *, /) and parenthetical
+        expressions. If you're a coder and feel like contributing, check out the repository
+        on <a href="https://github.com/smeans/metcalc">github</a>. If you need a refresher
+        on metric suffixes, I pulled my metric units list from
+        <a href="https://en.wikipedia.org/wiki/Metric_prefix">wikipedia</a>. If
+        you need a referesher on me, check out my <a href="http://smeans.com">my blog</a>.</p>
+      <div class="buttons">
+        <div class="round-button close_about">close</div>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery-3.1.1.slim.min.js"></script>
+  <script src="js/math.min.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/metcalc.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

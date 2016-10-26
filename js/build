@@ -1,0 +1,1 @@
+pegjs -e metcalc --format globals metcalc.pegjs

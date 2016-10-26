@@ -1,0 +1,74 @@
+/*
+ * global site styles
+ */
+ html {
+   font-family: monospace;
+   width: 100%;
+ }
+
+ .round-button {
+    display: inline-block;
+    min-height: 1em;
+    min-width: 1em;
+    line-height: 1em;
+    border-radius: 50%;
+    color:#fff;
+    text-align: center;
+    text-decoration: none;
+    background: #5DFDCB;
+    box-shadow: 0 0 3px gray;
+    font-weight:bold;
+}
+
+.round-button:active {
+    background: #C2FCEA;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.error {
+  background-color: #E8AEB7;
+}
+
+.calc {
+  display: flex;
+  font-size: 150%;
+  max-width: 40em;
+  background-color: #C9F9FF;
+  border-radius: .25em;
+  padding: .5em;
+}
+
+.calc div {
+  flex: 1 0 auto;
+}
+
+div.equals {
+  flex: 0 0 auto;
+}
+
+.result {
+  text-align: left;
+}
+
+.about_page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  background-color: #fff;
+  max-width: 50em;
+  padding: 1.5em;
+  border-radius: 1.5em;
+}
