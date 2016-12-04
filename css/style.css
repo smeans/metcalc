@@ -6,7 +6,7 @@
    width: 100%;
  }
 
- .round-button {
+.round-button {
     display: inline-block;
     min-height: 1em;
     min-width: 1em;
@@ -22,6 +22,32 @@
 
 .round-button:active {
     background: #C2FCEA;
+}
+
+
+.oval-button {
+    display: inline-block;
+    min-height: 1em;
+    min-width: 1em;
+    line-height: 1em;
+    border-radius: 25%;
+    color:#fff;
+    text-align: center;
+    text-decoration: none;
+    background: #5DFDCB;
+    box-shadow: 0 0 3px gray;
+    font-weight:bold;
+    padding: .25em;
+    font-size: 120%;
+}
+
+.oval-button:active {
+    background: #C2FCEA;
+}
+
+.buttons {
+  width: 100%;
+  text-align: center;
 }
 
 .hidden {

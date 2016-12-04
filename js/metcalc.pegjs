@@ -1,9 +1,6 @@
 /*
-* Simple Arithmetics Grammar
-* ==========================
-*
-* Accepts expressions like "2 * (3 + 4)" and computes their value.
-*/
+ *  metric suffix calculator grammar
+ */
 {
   function evalTree(n) {
     if (typeof n != 'object') {
