@@ -1,4 +1,8 @@
 var ms = {
+  "Q": 30,
+  "R": 27,
+  "Y": 24,
+  "Z": 21,
   "E": 18,
   "P": 15,
   "T": 12,
@@ -14,7 +18,15 @@ var ms = {
   "p": -12,
   "f": -15,
   "a": -18,
-  "xa": 18,
+  "z": -21,
+  "y": -24,
+  "r": -27,
+  "q": -30,
+  "quetta": 30,
+  "ronna": 27,
+  "yotta": 24,
+  "zetta": 21,
+  "exa": 18,
   "peta": 15,
   "tera": 12,
   "giga": 9,
@@ -28,7 +40,11 @@ var ms = {
   "nano": -9,
   "pico": -12,
   "femto": -15,
-  "atto": -18
+  "atto": -18,
+  "zepto": -21,
+  "yocto": -24,
+  "ronto": -27,
+  "quecto": -30
 };
 
 var msa = [{suffix:"", exp:0}];
@@ -49,12 +65,12 @@ function scaledNumber(n) {
 
 	if (na < Math.pow(10, msa[0].exp)) {
     	sv = msa[0];
-    } else if (na > Math.pow(10, msa[msa.length-1].exp)) {
+    } else if (na >= Math.pow(10, msa[msa.length-1].exp)) {
     	sv = msa[msa.length-1];
     } else {
     	var i = 0;
 
-        while (i < msa.length-1) {
+        do {
           var lv = Math.pow(10, msa[i].exp);
           var hv = Math.pow(10, msa[i+1].exp);
 
@@ -65,7 +81,7 @@ function scaledNumber(n) {
           }
 
           i++;
-        }
+        } while (i < msa.length - 1)
     }
 
     return {value: math.round((n/Math.pow(10, sv.exp)), 1).toString(), units:sv.suffix};
